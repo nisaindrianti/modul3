@@ -1,0 +1,33 @@
+<!--
+ | 3411191098_NisaFatimahIndrianti_DSE-C
+ |-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data-Type Checks</title>
+</head>
+<body>
+    <form name="myForm" action="" onsubmit="return validateForm()" method="POST">
+    <table>
+        <tr>
+            <td>Masukkan Nomor Telepon</td>
+            <td><input type="text" id="telp" name="telp"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+    </form>
+    <script type="text/javascript">
+        function validateForm(){
+            var telp = document.myForm.telp.value;
+            if(isNaN(telp)){
+                alert("Telp harus berupa angka");
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
